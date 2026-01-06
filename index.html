@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Welcome - RR Technosoft Training Institute</title>
+
+  <!-- Google Fonts for curly/cursive heading and a clean sans -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --accent-red:#e53935;
+      --bg-dark:#0b1020;
+      --glass: rgba(255,255,255,0.06);
+    }
+
+    /* Global reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      background: linear-gradient(180deg, rgba(6,11,33,0.86) 0%, rgba(8,13,34,0.86) 100%);
+      color: #f3f6f9;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;align-items:center;justify-content:center;min-height:100vh;padding:2rem;
+      background-image: url('https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=1800&auto=format&fit=crop&ixlib=rb-4.0.3&s=4d6f6e42a4d3d8a3bea9a8f2b3c6b8c6');
+      background-size:cover;background-position:center;
+    }
+
+    /* subtle overlay to make text pop */
+    body::before{
+      content:"";position:fixed;inset:0;background:linear-gradient(180deg, rgba(3,6,20,0.45), rgba(3,6,20,0.65));pointer-events:none;
+    }
+
+    .container{
+      position:relative;z-index:2;max-width:1100px;width:100%;display:grid;grid-template-columns:1fr;gap:1.5rem;align-items:center;
+      margin:auto;
+    }
+
+    .card{
+      background: linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+      border-radius:18px;padding:40px;backdrop-filter:blur(8px);
+      box-shadow: 0 10px 40px rgba(2,6,23,0.6);
+      border: 1px solid rgba(255,255,255,0.04);
+      display:flex;flex-direction:column;align-items:center;text-align:center;
+    }
+
+    /* Curly welcome message */
+    .welcome{
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(2rem, 4.5vw, 4rem);
+      color: #fff;
+      letter-spacing:1px;margin-bottom:0.25rem;
+      text-shadow: 0 6px 30px rgba(229,57,53,0.08);
+    }
+
+    .subtitle{
+      color: #dbe8ff;opacity:0.92;margin-bottom:1.25rem;font-weight:300;max-width:800px;
+      font-size: clamp(1rem, 1.8vw, 1.25rem);
+    }
+
+    /* RR Technosoft highlighted */
+    .brand{
+      display:inline-block;font-weight:800;color:var(--accent-red);font-size: clamp(2rem, 6vw, 6rem);
+      line-height:0.9;margin:0.5rem 0;text-transform:uppercase;letter-spacing:2px;
+      text-shadow: 0 10px 30px rgba(229,57,53,0.18);
+      transform:translateY(0);transition:transform .28s cubic-bezier(.2,.8,.2,1);
+    }
+    .brand:hover{transform:translateY(-6px)}
+
+    .info{font-size:0.95rem;color:#c9d8ff;margin-top:0.25rem}
+
+    /* Decorative icons row */
+    .icons{display:flex;gap:18px;align-items:center;justify-content:center;margin-top:1.25rem}
+    .icon{
+      width:84px;height:84px;border-radius:14px;background:linear-gradient(135deg, rgba(255,255,255,0.02), rgba(255,255,255,0.04));display:flex;align-items:center;justify-content:center;box-shadow: 0 8px 20px rgba(3,6,22,0.5);
+    }
+
+    .footer{margin-top:20px;padding-top:16px;border-top:1px dashed rgba(255,255,255,0.04);width:100%;text-align:center;color:#bcd2ff;font-weight:600}
+
+    /* Responsive layout for narrow screens */
+    @media (max-width:720px){
+      .card{padding:28px;border-radius:14px}
+      .brand{font-size: clamp(1.6rem, 12vw, 3.2rem)}
+    }
+
+    /* small animation */
+    @keyframes float {0% {transform: translateY(0)}50%{transform: translateY(-8px)}100%{transform:translateY(0)}}
+    .brand{animation: float 6s ease-in-out infinite}
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1 class="welcome">A warm, curly welcome to</h1>
+
+      <!-- Big red RR Technosoft -->
+      <div class="brand" aria-hidden="true">RR TECHNOSOFT</div>
+
+      <p class="subtitle">From <strong>Mallareddy College Students</strong> — we celebrate your curiosity, creativity and the bold steps you take into AI and DevOps.</p>
+
+      <div class="icons" aria-hidden="true">
+        <!-- Simple inline SVG icons to visually suggest AI and DevOps -->
+        <div class="icon" title="AI" aria-label="AI icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="2" y="2" width="20" height="20" rx="4" stroke="rgba(255,255,255,0.18)" stroke-width="1.2"/>
+            <path d="M8 12c1.25 1.5 2.75 2 4 2s2.75-.5 4-2" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+            <circle cx="12" cy="8" r="1.6" fill="#fff" opacity="0.95"/>
+          </svg>
+        </div>
+
+        <div class="icon" title="DevOps" aria-label="DevOps icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6 7v5a3 3 0 003 3h6" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+            <path d="M18 17v-5a3 3 0 00-3-3H9" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+            <circle cx="6" cy="7" r="1" fill="#fff"/>
+            <circle cx="18" cy="17" r="1" fill="#fff"/>
+          </svg>
+        </div>
+
+        <div class="icon" title="Cloud" aria-label="Cloud icon">
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 15A4 4 0 0016 11h-1.3A5 5 0 1010 18h6a3 3 0 004-3z" stroke="#fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.95"/>
+          </svg>
+        </div>
+      </div>
+
+      <div class="info">Explore AI, automate workflows, and build resilient systems — together we learn, code, and ship.</div>
+
+      <div class="footer">KPHB Hyderabad</div>
+    </div>
+  </div>
+
+</body>
+</html>
